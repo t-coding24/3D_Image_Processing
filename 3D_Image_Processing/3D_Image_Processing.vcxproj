@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F32FFA60-64C8-4C05-9CCE-BDD7D4A69E03}</ProjectGuid>
+    <RootNamespace>My3D_Image_Processing</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\library\include\itk-4.6;C:\library\include\boost_1_55_0;C:\library\include\mlLib-2.1;C:\library\include\gdcm-2.4;C:\library\include\opencv-2.4.6;C:\library\include\vtk-6.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\library\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>mlThinning-vc120-x64-mt.lib;mlVolumeFusion-vc120-x64-mt.lib;vtkalglib610vc120x64.lib;vtkChartsCore610vc120x64.lib;vtkCommonColor610vc120x64.lib;vtkCommonComputationalGeometry610vc120x64.lib;vtkCommonCore610vc120x64.lib;vtkCommonDataModel610vc120x64.lib;vtkCommonExecutionModel610vc120x64.lib;vtkCommonMath610vc120x64.lib;vtkCommonMisc610vc120x64.lib;vtkCommonSystem610vc120x64.lib;vtkCommonTransforms610vc120x64.lib;vtkDICOMParser610vc120x64.lib;vtkDomainsChemistry610vc120x64.lib;vtkexoIIc610vc120x64.lib;vtkexpat610vc120x64.lib;vtkFiltersAMR610vc120x64.lib;vtkFiltersCore610vc120x64.lib;vtkFiltersExtraction610vc120x64.lib;vtkFiltersFlowPaths610vc120x64.lib;vtkFiltersGeneral610vc120x64.lib;vtkFiltersGeneric610vc120x64.lib;vtkFiltersGeometry610vc120x64.lib;vtkFiltersHybrid610vc120x64.lib;vtkFiltersHyperTree610vc120x64.lib;vtkFiltersImaging610vc120x64.lib;vtkFiltersModeling610vc120x64.lib;vtkFiltersParallel610vc120x64.lib;vtkFiltersParallelImaging610vc120x64.lib;vtkFiltersProgrammable610vc120x64.lib;vtkFiltersSelection610vc120x64.lib;vtkFiltersSMP610vc120x64.lib;vtkFiltersSources610vc120x64.lib;vtkFiltersStatistics610vc120x64.lib;vtkFiltersTexture610vc120x64.lib;vtkFiltersVerdict610vc120x64.lib;vtkfreetype610vc120x64.lib;vtkftgl610vc120x64.lib;vtkGeovisCore610vc120x64.lib;vtkgl2ps610vc120x64.lib;vtkGUISupportMFC610vc120x64.lib;vtkhdf5610vc120x64.lib;vtkhdf5_hl610vc120x64.lib;vtkImagingColor610vc120x64.lib;vtkImagingCore610vc120x64.lib;vtkImagingFourier610vc120x64.lib;vtkImagingGeneral610vc120x64.lib;vtkImagingHybrid610vc120x64.lib;vtkImagingMath610vc120x64.lib;vtkImagingMorphological610vc120x64.lib;vtkImagingSources610vc120x64.lib;vtkImagingStatistics610vc120x64.lib;vtkImagingStencil610vc120x64.lib;vtkInfovisCore610vc120x64.lib;vtkInfovisLayout610vc120x64.lib;vtkInteractionImage610vc120x64.lib;vtkInteractionStyle610vc120x64.lib;vtkInteractionWidgets610vc120x64.lib;vtkIOAMR610vc120x64.lib;vtkIOCore610vc120x64.lib;vtkIOEnSight610vc120x64.lib;vtkIOExodus610vc120x64.lib;vtkIOExport610vc120x64.lib;vtkIOGeometry610vc120x64.lib;vtkIOImage610vc120x64.lib;vtkIOImport610vc120x64.lib;vtkIOInfovis610vc120x64.lib;vtkIOLegacy610vc120x64.lib;vtkIOLSDyna610vc120x64.lib;vtkIOMINC610vc120x64.lib;vtkIOMovie610vc120x64.lib;vtkIONetCDF610vc120x64.lib;vtkIOParallel610vc120x64.lib;vtkIOPLY610vc120x64.lib;vtkIOSQL610vc120x64.lib;vtkIOVideo610vc120x64.lib;vtkIOXML610vc120x64.lib;vtkIOXMLParser610vc120x64.lib;vtkjpeg610vc120x64.lib;vtkjsoncpp610vc120x64.lib;vtklibxml2610vc120x64.lib;vtkmetaio610vc120x64.lib;vtkNetCDF610vc120x64.lib;vtkNetCDF_cxx610vc120x64.lib;vtkoggtheora610vc120x64.lib;vtkParallelCore610vc120x64.lib;vtkpng610vc120x64.lib;vtkproj4610vc120x64.lib;vtkRenderingAnnotation610vc120x64.lib;vtkRenderingContext2D610vc120x64.lib;vtkRenderingCore610vc120x64.lib;vtkRenderingFreeType610vc120x64.lib;vtkRenderingFreeTypeOpenGL610vc120x64.lib;vtkRenderingGL2PS610vc120x64.lib;vtkRenderingImage610vc120x64.lib;vtkRenderingLabel610vc120x64.lib;vtkRenderingLIC610vc120x64.lib;vtkRenderingLOD610vc120x64.lib;vtkRenderingOpenGL610vc120x64.lib;vtkRenderingVolume610vc120x64.lib;vtkRenderingVolumeAMR610vc120x64.lib;vtkRenderingVolumeOpenGL610vc120x64.lib;vtksqlite610vc120x64.lib;vtksys610vc120x64.lib;vtktiff610vc120x64.lib;vtkverdict610vc120x64.lib;vtkViewsContext2D610vc120x64.lib;vtkViewsCore610vc120x64.lib;vtkViewsGeovis610vc120x64.lib;vtkViewsInfovis610vc120x64.lib;vtkzlib610vc120x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\library\include\itk-4.6;C:\library\include\boost_1_55_0;C:\library\include\mlLib-2.1;C:\library\include\gdcm-2.4;C:\library\include\opencv-2.4.6;C:\library\include\vtk-6.1;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\library\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>mlThinning-vc120-x64-mt.lib;mlVolumeFusion-vc120-x64-mt.lib;vtkalglib610vc120x64.lib;vtkChartsCore610vc120x64.lib;vtkCommonColor610vc120x64.lib;vtkCommonComputationalGeometry610vc120x64.lib;vtkCommonCore610vc120x64.lib;vtkCommonDataModel610vc120x64.lib;vtkCommonExecutionModel610vc120x64.lib;vtkCommonMath610vc120x64.lib;vtkCommonMisc610vc120x64.lib;vtkCommonSystem610vc120x64.lib;vtkCommonTransforms610vc120x64.lib;vtkDICOMParser610vc120x64.lib;vtkDomainsChemistry610vc120x64.lib;vtkexoIIc610vc120x64.lib;vtkexpat610vc120x64.lib;vtkFiltersAMR610vc120x64.lib;vtkFiltersCore610vc120x64.lib;vtkFiltersExtraction610vc120x64.lib;vtkFiltersFlowPaths610vc120x64.lib;vtkFiltersGeneral610vc120x64.lib;vtkFiltersGeneric610vc120x64.lib;vtkFiltersGeometry610vc120x64.lib;vtkFiltersHybrid610vc120x64.lib;vtkFiltersHyperTree610vc120x64.lib;vtkFiltersImaging610vc120x64.lib;vtkFiltersModeling610vc120x64.lib;vtkFiltersParallel610vc120x64.lib;vtkFiltersParallelImaging610vc120x64.lib;vtkFiltersProgrammable610vc120x64.lib;vtkFiltersSelection610vc120x64.lib;vtkFiltersSMP610vc120x64.lib;vtkFiltersSources610vc120x64.lib;vtkFiltersStatistics610vc120x64.lib;vtkFiltersTexture610vc120x64.lib;vtkFiltersVerdict610vc120x64.lib;vtkfreetype610vc120x64.lib;vtkftgl610vc120x64.lib;vtkGeovisCore610vc120x64.lib;vtkgl2ps610vc120x64.lib;vtkGUISupportMFC610vc120x64.lib;vtkhdf5610vc120x64.lib;vtkhdf5_hl610vc120x64.lib;vtkImagingColor610vc120x64.lib;vtkImagingCore610vc120x64.lib;vtkImagingFourier610vc120x64.lib;vtkImagingGeneral610vc120x64.lib;vtkImagingHybrid610vc120x64.lib;vtkImagingMath610vc120x64.lib;vtkImagingMorphological610vc120x64.lib;vtkImagingSources610vc120x64.lib;vtkImagingStatistics610vc120x64.lib;vtkImagingStencil610vc120x64.lib;vtkInfovisCore610vc120x64.lib;vtkInfovisLayout610vc120x64.lib;vtkInteractionImage610vc120x64.lib;vtkInteractionStyle610vc120x64.lib;vtkInteractionWidgets610vc120x64.lib;vtkIOAMR610vc120x64.lib;vtkIOCore610vc120x64.lib;vtkIOEnSight610vc120x64.lib;vtkIOExodus610vc120x64.lib;vtkIOExport610vc120x64.lib;vtkIOGeometry610vc120x64.lib;vtkIOImage610vc120x64.lib;vtkIOImport610vc120x64.lib;vtkIOInfovis610vc120x64.lib;vtkIOLegacy610vc120x64.lib;vtkIOLSDyna610vc120x64.lib;vtkIOMINC610vc120x64.lib;vtkIOMovie610vc120x64.lib;vtkIONetCDF610vc120x64.lib;vtkIOParallel610vc120x64.lib;vtkIOPLY610vc120x64.lib;vtkIOSQL610vc120x64.lib;vtkIOVideo610vc120x64.lib;vtkIOXML610vc120x64.lib;vtkIOXMLParser610vc120x64.lib;vtkjpeg610vc120x64.lib;vtkjsoncpp610vc120x64.lib;vtklibxml2610vc120x64.lib;vtkmetaio610vc120x64.lib;vtkNetCDF610vc120x64.lib;vtkNetCDF_cxx610vc120x64.lib;vtkoggtheora610vc120x64.lib;vtkParallelCore610vc120x64.lib;vtkpng610vc120x64.lib;vtkproj4610vc120x64.lib;vtkRenderingAnnotation610vc120x64.lib;vtkRenderingContext2D610vc120x64.lib;vtkRenderingCore610vc120x64.lib;vtkRenderingFreeType610vc120x64.lib;vtkRenderingFreeTypeOpenGL610vc120x64.lib;vtkRenderingGL2PS610vc120x64.lib;vtkRenderingImage610vc120x64.lib;vtkRenderingLabel610vc120x64.lib;vtkRenderingLIC610vc120x64.lib;vtkRenderingLOD610vc120x64.lib;vtkRenderingOpenGL610vc120x64.lib;vtkRenderingVolume610vc120x64.lib;vtkRenderingVolumeAMR610vc120x64.lib;vtkRenderingVolumeOpenGL610vc120x64.lib;vtksqlite610vc120x64.lib;vtksys610vc120x64.lib;vtktiff610vc120x64.lib;vtkverdict610vc120x64.lib;vtkViewsContext2D610vc120x64.lib;vtkViewsCore610vc120x64.lib;vtkViewsGeovis610vc120x64.lib;vtkViewsInfovis610vc120x64.lib;vtkzlib610vc120x64.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="volumeData.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
