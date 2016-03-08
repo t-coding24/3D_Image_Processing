@@ -20,6 +20,11 @@ vector<string> SearchImageMode(vector<string> all_str,string searchType)
 
 void main(int argc, char** argv)
 {
+	if (argc < 4){
+		cerr << "Required both Doppler, Bmode and BmodeOrigin volume." << endl;
+		system("PAUSE");
+		return;
+	}
 	vector<string> inputPaths;
 	for (int i = 0; i < argc; ++i) {
 		inputPaths.push_back((string)argv[i]);
@@ -28,4 +33,5 @@ void main(int argc, char** argv)
 	vector<string> bmodePaths = SearchImageMode(inputPaths, "bmode");
 	vector<string> bmodeOriginalPaths = SearchImageMode(inputPaths, "original");
 	vector<string> dopplerPaths = SearchImageMode(inputPaths, "doppler");
+	
 }
