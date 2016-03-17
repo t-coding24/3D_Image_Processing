@@ -96,8 +96,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="3DThinning.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="usBeam.cpp" />
     <ClCompile Include="volumeData.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="3DThinning.hpp" />
+    <ClInclude Include="usBeam.hpp" />
+    <ClInclude Include="volumeData.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
